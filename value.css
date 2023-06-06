@@ -146,7 +146,7 @@ body{
 
     }
     .ion{
-        width: 370px;
+        width: 350px;
         text-align: center;
     }
     .soft{
@@ -154,7 +154,7 @@ body{
     }
     .pen{
         width: 350px;
-        margin-left: 10px;
+        margin-left: 0px;
     }
     .go{
         display: flex;
@@ -180,7 +180,7 @@ body{
  .bus{
     height: 420px;
     width: 350px;
-    margin-left: 10px;
+    margin-left: 0px;
  }
  .enjoy{
     display: flex;
