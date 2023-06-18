@@ -245,30 +245,32 @@
             </div>
            <div style="padding: 20px;"> 
                 <p>Funding Amount</p> 
-                <input type="text" style="width: 50%; height: 35px;"> <br>
+                <input type="text" style="width: 50%; height: 35px;" id="lon"> <br>
                 <div class="down">
                     <div>
                         <p>MarkUp (%)</p> 
-                        <input type="text" style="height: 35px; width: 100%">
+                        <input type="text" style="height: 35px; width: 100%" value="10" id="lom" onchange="cha()">
                     </div>
                     <div>
-                        <p>Fundind period (years)</p>
+                        <p>Payment period</p>
                         <input type="text" style=" height:35px; width:100%">
                     </div>
                 </div> 
-                <i style="color: rgb(3, 85, 117)">Your Markup ha been assumed as 10%</i>  
-                <p>Payment Period</p> 
-                <select class="form-select" aria-label=" select example" style="max-width: 50%;">
-                    <option selected>Monthly</option>
-                    <option value="1">Quater-Annualy</option>
-                    <option value="2">Annuly</option>
-                    <option value="3">Semi-annualy</option>
+                <i style="color: rgb(3, 85, 117)">Your Markup ha been assumed as <span id="mercy">10</span>%</i>  
+                <p>Fundind Period (monthly)</p> 
+                <select class="form-select" aria-label=" select example" style="max-width: 50%;" id="stee">
+                    <option value="1">one month</option>
+                    <option value="2">two month</option>
+                    <option value="3">three month</option>
+                    <option value="4">four month</option>
+                    <option value="5">five month</option>
+                    <option value="6">six month</option>
                 </select> <br>
                 <p>Moritorim</p>
                 <input type="text" style=" height:35px; width:250px"> <br> <br> <br>
-                 <button class="cla">Calculate</button>
-                 <p style="text-align: center; font-size: 20px;">Your repayment will be <span style="color: rgb(2, 111, 178);">0</span> with <span style="color: rgb(2, 111, 178);">0</span> scheduled number of payments <br>
-                    The total repayment on this funding will be <span style="color: rgb(2, 111, 178);">0</span></p>
+                 <button onclick="opeyemi()" class="cla">Calculate</button>
+                 <p style="text-align: center; font-size: 20px;">Your repayment will be <span style="color: rgb(2, 111, 178);" id="fre">0</span> with <span style="color: rgb(2, 111, 178);" id="frt">0</span> scheduled number of payments <br>
+                    The total repayment on this funding will be <span style="color: rgb(2, 111, 178);" id="fry">0</span></p>
            </div>
            
         </div>
@@ -328,6 +330,31 @@
                 </div>
             </div>
         </div>    
+
+
+        <div>
+            <p style="color: red; text-align: center;">CAVEAT: THIS IS STUDENT PROJECT SOLELY FOR LEARNING AND PRACTICE PURPOSE, AND NOT AN ATTEMPT TO CLONE THE EXISTING PAGE</p>
+        </div>
+        <script>
+
+        function opeyemi(){
+       let firstMoney = Number(document.querySelector(`#lon`).value);
+       let MarkUpPercentAge = Number(document.querySelector(`#lom`).value);
+       let MonthsYear = Number(document.querySelector(`#stee`).value);
+       let Percentage = MarkUpPercentAge/100;
+       let TotalAmount = firstMoney*Percentage+firstMoney;
+       let jk= MonthsYear;
+       let Inter= TotalAmount/MonthsYear;
+        document.querySelector(`#fre`).innerHTML= `${Inter} naria`;
+        document.querySelector(`#frt`).innerHTML = `${jk}`;
+        document.querySelector(`#fry`).innerHTML = `${TotalAmount} naria`;
+       }
+       function cha(){
+        let MarkUpPercentAge = Number(document.querySelector(`#lom`).value);
+        let show = document.querySelector(`#mercy`)
+        show.innerHTML=`${MarkUpPercentAge}`
+    }
+        </script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>     
 </body>
 </html>
