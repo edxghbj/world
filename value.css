@@ -101,6 +101,9 @@ body{
     text-align: end;
     color: rgb(98, 98, 114);
 }
+.title:hover{
+    color: gold;
+}
 @media screen and (max-width: 1000px) {
     .enjoy{
         display: flex;

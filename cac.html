@@ -64,11 +64,6 @@
             width: 50%;
             margin-top: -15px;
         }
-        .fr{
-            width: 96%;
-            margin-left: 10px;
-            margin-top: 10px;
-        }
         .rt{
             width: 50%;
             height: 150px;
@@ -82,10 +77,12 @@
             background: green;
             border: none;
             border-radius: 5px;
-            width: 100%;
+            width: 90%;
             text-align: center;
             height: 40px;
             margin-top: 30px;
+            margin-left: 20px;
+            padding-top: 10px;
         }
         .lat{
             border: 1px solid rgb(185, 181, 181);
@@ -112,16 +109,24 @@
         .few:hover{
             color: black;
         }
+        .pur{
+                color: blue; font-size: 20px;
+            }
+            .form-control{
+                width: 90%;
+                margin-left: 20px;
+                margin-top: 20px;
+            }
         @media screen and (max-width: 768px) {
             .alert{
                 font-size: 15px;
                 width: 90%;
             }
-            .fade{
+            .dax{
                 width: 90%;
             }
-            .dax{
-                font-size: 12px;
+             .fade{
+                width: 90%;
             }
             .hu{
                 width: 90%;
@@ -136,11 +141,9 @@
                 width: 90%;
                 font-size: 12px;
             }
-            .rt{
-                width: 90%;
-            }
             .log{
                 margin-top: 10px;
+                width: 90%;
             }
             .win{
                 min-width: 100%;
@@ -149,10 +152,8 @@
             .try{
                 display: flex; flex-direction: column; align-items: flex-start;
                 margin-left: 0px;
-            }
-            input{
-                max-width: 60px;
-            }
+            }   
+
             .ht{
                 color:white;
             }
@@ -172,6 +173,24 @@
             .up{
                 border-bottom: 2px solid green;
             }
+            .form-control{
+                width: 90%;
+            } 
+            .rt{
+                width: 90%;
+            }
+            .sub{
+            color: white;
+            background: green;
+            border: none;
+            border-radius: 5px;
+            width: 90%;
+            text-align: center;
+            height: 40px;
+            margin-top: 30px;
+            margin-left: 20px;
+            padding-top: 10px;
+        }
         }
         @media screen and(min-width: 768px) {
           .hy{
@@ -180,15 +199,22 @@
           .rate{
             display: none;
           }
+          .nin{
+            margin-left: -400px;
+          }
+
+          .soso{
+            display: none;
+          }
         }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg lof fixed top up">
        <div class="container"> 
-        <div>
-            <a class="navbar-toggler fr"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="fa fa-bars" style="color: blue; border: none; border-radius: none;"></span>
+        <div class="soso">
+            <a   class="navbar-toggler fr" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars pur"></span>
             </a>
         </div>
         <div>
@@ -225,7 +251,7 @@
                     <a class="nav-link ht " href="download.html" >Download</a>
                     </li><hr>
                     <div class="vr" style="color: grey; width: 1px;height: 50px; "></div>
-                    <li class="nav-item">
+                    <li class="nav-item"> 
                     <a class="nav-link ht" href="whogohost.html" >Whogohost</a>
                     </li><hr>
                     <div class="vr" style="color: grey; height: 50px;"></div>
@@ -288,9 +314,9 @@
                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Username">
                 </div>
                 </div>
-                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0"><input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Email"></div>
-                <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0"><input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Phone Number"></div>
-                <div class="tab-pane fade" id="note-tab-pane" role="tabpanel" aria-labelledby="note-tab" tabindex="0"><input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Accredition Number"></div>
+                <div class="tab-pane" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" ><input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Email"></div>
+                <div class="tab-pane " id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" ><input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Phone Number"></div>
+                <div class="tab-pane " id="note-tab-pane" role="tabpanel" aria-labelledby="note-tab" ><input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Accredition Number"></div>
                 <button class="sub"><h6>Submit</h6></button>
             </div>
          </div>
