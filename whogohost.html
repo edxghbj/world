@@ -63,12 +63,13 @@
             }
 
         }
-        @media screen and (max-width: 468px) {
+        @media screen and (max-width: 768px) {
             .all{
                 width: 95%
             }
             .dash{
-                width: 80%
+                width: 80%;
+                margin-left: 40px;
             }
             .hr{
                 width: 15%;
@@ -86,6 +87,7 @@
             }
             .song{
               margin-left: 80%;
+              margin-top: 320px;
               height: 50px;
             }
         }
@@ -98,7 +100,9 @@
     <div class="song">
       <img src="ty.png"  style="border-radius: 20px;" height="60px">
     </div>
-   <form> 
+
+
+   <form name="myform" onSubmit="return(validate())"> 
     <div class="all mx-auto p-2">
         <div style="display: flex; flex-direction: column; align-items: center; margin-top: 30px;">
             <p style="color: rgb(98, 97, 97); font-size: 13px;">Use social account (optional)</p>
@@ -117,28 +121,28 @@
       <div class="row g-2">
         <div class="col-md">
           <div class="form-floating">
-        <label style="color: grey;">First Name<span style="color: grey;">*</span></label> <br> <br>
-        <input type="text" class="form-control" id="floatingInputGrid" style="height: 50px;">
+        <label style="color: grey;">First Name <span style="color: grey;">*</span><span class="frst" style="color: rgb(245, 6, 6); font-size: 15px; margin-left: 30px;"></span></label> <br> <br>
+        <input type="text" name="txt" class="form-control" id="floatingInputGrid" style="height: 50px;">
           </div>
         </div>
         <div class="col-md">
           <div class="form-floating">
-            <label style="color: grey;">Last Name <span style="color: grey;">*</span></label> <br> <br>
-            <input type="text" class="form-control" id="floatingInputGrid" style="height: 50px;">
+            <label style="color: grey;">Last Name <span style="color: grey;">*</span> <span class="las" style="color: rgb(245, 6, 6); font-size: 15px; margin-left: 30px;"></span></label> <br> <br>
+            <input type="text" name="ast" class="form-control" id="floatingInputGrid" style="height: 50px;">
           </div>
         </div>
       </div>
       <div class="row g-2">
         <div class="col-md">
           <div class="form-floating">
-            <label style="color: grey;">Email Address<span style="color: grey;">*</span></label> <br> <br>
-            <input type="email" class="form-control" id="floatingInputGrid" style="height: 50px;">
+            <label style="color: grey;">Email Address<span style="color: grey;">*</span> <span class="tid" style="color: rgb(245, 6, 6); font-size: 15px; margin-left: 30px;"></span></label> <br> <br>
+            <input type="email" name="em" class="form-control" id="floatingInputGrid" style="height: 50px;">
           </div>
         </div>
         <div class="col-md">
           <div class="form-floating">
-            <label style="color: grey;">Phone Number <span style="color: grey;">*</span></label> <br> <br>
-            <input type="number" class="form-control" id="floatingInputGrid" style="height: 50px;">
+            <label style="color: grey;">Phone Number <span style="color: grey;">*</span> <span class="fut" style="color: rgb(245, 6, 6); font-size: 15px; margin-left: 30px;"></span></label> <br> <br>
+            <input type="text" name="pone" class="form-control" id="floatingInputGrid" style="height: 50px;">
           </div>
         </div>
       </div> <br> <br>
@@ -152,8 +156,8 @@
         </div>
         <div class="col-md">
           <div class="form-floating">
-            <label style="color: grey;">Street Address <span style="color: grey;">*</span></label> <br> <br>
-            <input type="text" class="form-control" id="floatingInputGrid" style="height: 50px;">
+            <label style="color: grey;">Street Address <span style="color: grey;">*</span> <span class="fif" style="color: rgb(245, 6, 6); font-size: 15px; margin-left: 30px;"></span></label> <br> <br>
+            <input type="text" name="strt" class="form-control" id="floatingInputGrid" style="height: 50px;">
           </div>
         </div>
       </div>
@@ -166,19 +170,19 @@
         </div>
         <div class="col-md">
           <div class="form-floating">
-            <label style="color: grey;">City <span style="color: grey;">*</span></label> <br> <br>
-            <input type="text" class="form-control" id="floatingInputGrid" style="height: 50px;">
+            <label style="color: grey;">City <span style="color: grey;">*</span> <span class="city" style="color: rgb(245, 6, 6); font-size: 15px; margin-left: 30px;"></span></label> <br> <br>
+            <input type="text" name="Kano" class="form-control" id="floatingInputGrid" style="height: 50px;">
           </div>
         </div>
       </div> <br>
       <div class="row g-3">
         <div class="col-sm-3">
-            <label style="color: grey;">State <span style="color: grey;">*</span></label> 
-          <input type="text" class="form-control" style="height: 50px;" >
+            <label style="color: grey;">State <span style="color: grey;">*</span> <span class="state" style="color: rgb(245, 6, 6); font-size: 15px; margin-left: 10px;"></span></label> 
+          <input type="text" name="kogi" class="form-control" style="height: 50px;" >
         </div>
         <div class="col-sm-3">
-            <label style="color: grey;">Postcard <span style="color: grey;">*</span></label> 
-          <input type="text" class="form-control" style="height: 50px;">
+            <label style="color: grey;">Postcard <span style="color: grey;">*</span> <span class="post" style="color: rgb(245, 6, 6); font-size: 15px; margin-left: 10px;"></span></label> 
+          <input type="text" name="cardi" class="form-control" style="height: 50px;">
         </div>
         <div class="col-sm">
             <label style="color: grey;">Country <span style="color: grey;">*</span></label>
@@ -213,10 +217,10 @@
                 </div>
             </div>
             <div class="col-md">
-                <label style="color: grey;">Customer Category <span style="color: grey;">*</span></label>
+                <label style="color: grey;">Customer Category <span style="color: grey;">*</span> <span class="cus" style="color: rgb(245, 6, 6); font-size: 15px; margin-left: 30px;"></span></label>
             <div class="form-floating">
-                <select class="form-select" id="floatingSelectGrid">
-                <option selected></option>
+                <select name="customer" class="form-select" id="floatingSelectGrid">
+                <option  value="-1"></option>
                 <option value="1">Web Developer</option>
                 <option value="2">Web designer</option>
                 <option value="3">NGO</option>
@@ -274,15 +278,15 @@
       <h6 style="font-size: 20px; margin-top: 40px;">Account Security</h6>
       <div class="row g-2">
         <div class="col-md">
-          <label>Password *</label>
+          <label>Password * <span class="pass" style="color: rgb(245, 6, 6); font-size: 15px; margin-left: 30px;"></span></label>
           <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInputGrid">
+            <input  name="word" type="text" class="form-control" id="floatingInputGrid">
           </div>
         </div>
         <div class="col-md">
-          <label>Confirm Password *</label>
+          <label>Confirm Password * <span class="ass" style="color: rgb(245, 6, 6); font-size: 15px; margin-left: 30px;"></span></label>
           <div class="form-floating">
-            <input type="text" class="form-control" id="floatingInputGrid">
+            <input name="corn" type="text" class="form-control" id="floatingInputGrid">
           </div>
         </div>
       </div>
@@ -304,7 +308,7 @@
           I have read and agree to the <a href="#" style="color: rgb(0, 102, 255); text-decoration: none;">Terms And Conditions</a> <span  style="color: grey;">*</span> 
         </label>
       </div>
-      <button style="color: white; width: 90%; height: 55px; background-color: rgb(0, 21, 255); border: none; border-radius: 5px; text-align: center; margin-left: 30px ; margin-top: 40px;"><h6>Register</h6></button> <hr>
+      <button style="color: white; width: 90%; height: 55px; background-color: rgb(0, 21, 255); border: none; border-radius: 5px; text-align: center; margin-left: 30px ; margin-top: 40px;" onclick="validate()"><h6>Register</h6></button> <hr>
       <div style="margin-top: 30px; text-align: center;">
         <p>Already registered with us? <a href="#" style="color: rgb(0, 102, 255); text-decoration: none;" > Sign In </a> or <a href="#" style="color: rgb(0, 102, 255); text-decoration: none;"> Reset Password </a></p>
       </div>
@@ -330,7 +334,7 @@
               <a class="nav-link vt" href="whatsapp.html" style="color: white;">Whatsapp</a>
               </li>
               <li class="nav-item">
-              <a class="nav-link vt" href="#" style="color: white;">Explore</a>
+              <a class="nav-link vt" href="explore.html" style="color: white;">Explore</a>
               </li>
               <li class="nav-item">
               <a class="nav-link vt" href="download.html" style="color: white;">Download</a>
@@ -349,6 +353,68 @@
   <div>
     <p style="color: red; text-align: center;">CAVEAT: THIS IS STUDENT PROJECT SOLELY FOR LEARNING AND PRACTICE PURPOSE, AND NOT AN ATTEMPT TO CLONE THE EXISTING PAGE</p>
 </div>
+
+  <script>
+    function validate(){
+      let names =/^[a-zA-Z]+$/
+      let myemail = /^\w+@[a-z]+\.[a-z]{2,3}$/;
+      let nums = /^[0-9]+$/;
+      let passW = /^(?=.*[!@#$%^&*(),.?":{}|<>])(?=.*\d)(?=.*[a-zA-Z]).+$/;
+      let confirm = document.myform.word.value;
+      let firm = document.myform.corn.value;
+      if(!document.myform.txt.value.match(names)){
+        document.querySelector('.frst').innerHTML=`Invalid Text`;
+        return false;
+      }
+      if(!document.myform.ast.value.match(names)){
+        document.querySelector('.las').innerHTML=`Required`;
+        return false;
+      }
+      if(!document.myform.em.value.match(myemail)){
+        document.querySelector('.tid').innerHTML=`Invalid Email`;
+        return false;
+      }
+      if(!document.myform.pone.value.match(nums)){
+        document.querySelector('.fut').innerHTML=`Invalid Phone Number`;
+        return false;
+      }
+      if(!document.myform.strt.value.match(names)){
+        document.querySelector('.fif').innerHTML=`Street Name Required`;
+        return false;
+      }
+      if(!document.myform.kano.value.match(names)){
+        document.querySelector('.city').innerHTML=`City Required`;
+        return false;
+      }
+      if(!document.myform.kogi.value.match(names)){
+        document.querySelector('.state').innerHTML=`State Required`;
+        return false;
+      }
+      if(!document.myform.cardi.value.match(names)){
+        document.querySelector('.post').innerHTML=`PostCard Required`;
+        return false;
+      }
+      if(document.myform.customer.value=="-1"){
+        document.querySelector('.cus').innerHTML=`Required`;
+        return false;
+      }
+      if(!document.myform.word.value.match(names)){
+        document.querySelector('.pass').innerHTML=`Invalid Password`;
+        return false;
+      }
+      if(firm!=confirm){
+        document.querySelector('.ass').innerHTML=`The Password doesn't match`;
+        return false;
+      }
+      else{
+        return true
+      }
+    }
+  </script>
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>    
 </body>
 </html>

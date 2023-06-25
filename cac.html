@@ -1,48 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAC</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="cac.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .try{
-            display: flex; flex-direction: column; align-items: flex-start;
+        .try {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
             margin-left: 300px;
         }
-        .spot{
+
+        .spot {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             align-items: baseline;
         }
-        .do{
-            color: white; text-decoration: none;
+
+        .do {
+            color: white;
+            text-decoration: none;
         }
-        .do:hover{
+
+        .do:hover {
             color: rgb(12, 228, 12);
         }
-        .dome{
+
+        .dome {
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        .up{
+
+        .up {
             height: 60px;
         }
-        .rate{
+
+        .rate {
             display: none;
             color: white;
         }
-        .log{
+
+        .log {
             text-align: center;
             margin-top: 40px;
             color: green;
         }
-        .alert{
+
+        .alert {
             background: rgba(255, 213, 213, 0.893);
             border: 1.5px solid red;
             border-radius: 0px;
@@ -51,28 +66,35 @@
             font-size: 19px;
             margin-top: -15px;
         }
-        .nin{
+
+        .nin {
             color: rgb(253, 5, 5);
             font-size: 19px;
         }
-        .ope{
+
+        .ope {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .kl{
+
+        .kl {
             width: 50%;
             margin-top: -15px;
         }
-        .rt{
-            width: 50%;
+
+        .rt {
+            width: 100%;
             height: 150px;
             background-color: white;
             border: 1px solid rgb(210, 207, 207);
             border-radius: 0px 0px 5px 5px;
             border-top: none;
+            margin-right: 405px;
+            margin-top: -19px;
         }
-        .sub{
+
+        .sub {
             color: white;
             background: green;
             border: none;
@@ -84,7 +106,8 @@
             margin-left: 20px;
             padding-top: 10px;
         }
-        .lat{
+
+        .lat {
             border: 1px solid rgb(185, 181, 181);
             border-radius: 5px;
             width: 50%;
@@ -92,10 +115,12 @@
             height: 50px;
             margin-top: 30px;
         }
-        .dax{
+
+        .dax {
             margin-top: 30px;
         }
-        .hu{
+
+        .hu {
             width: 50%;
             height: 40px;
             background-color: green;
@@ -103,236 +128,358 @@
             border: none;
             border-radius: 5px;
         }
-        .few{
+
+        .few {
             color: black;
         }
-        .few:hover{
+
+        .few:hover {
             color: black;
         }
-        .pur{
-                color: blue; font-size: 20px;
-            }
-            .form-control{
-                width: 90%;
-                margin-left: 20px;
-                margin-top: 20px;
-            }
+
+        .pur {
+            color: blue;
+            font-size: 20px;
+        }
+
+        .form-control {
+            width: 90%;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 1000px){
+           .rt{ 
+            margin-right: 250px;
+           }
+           .day{
+            display: none;
+           }
+        }
+
         @media screen and (max-width: 768px) {
-            .alert{
+            .alert {
                 font-size: 15px;
                 width: 90%;
             }
-            .dax{
+
+            .dax {
                 width: 90%;
             }
-             .fade{
+
+            .fade {
                 width: 90%;
             }
-            .hu{
+
+            .hu {
                 width: 90%;
             }
-            .lat{
+
+            .lat {
                 width: 90%;
             }
-            .input{
+
+            .input {
                 width: 90%;
             }
-            .kl{
+
+            .kl {
                 width: 90%;
                 font-size: 12px;
             }
-            .log{
+
+            .log {
                 margin-top: 10px;
                 width: 90%;
             }
-            .win{
+
+            .win {
                 min-width: 100%;
                 max-width: 100%;
             }
-            .try{
-                display: flex; flex-direction: column; align-items: flex-start;
-                margin-left: 0px;
-            }   
 
-            .ht{
-                color:white;
+            .try {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 0px;
             }
-            .we{
+
+            .ht {
+                color: white;
+            }
+
+            .we {
                 color: white;
                 background-color: rgb(227, 246, 221);
             }
-            .vr{
+
+            .vr {
                 display: none;
             }
-            .rate{
+
+            .rate {
                 display: block;
             }
-            .day{
+
+            .day {
                 display: none;
             }
-            .up{
+
+            .up {
                 border-bottom: 2px solid green;
             }
-            .form-control{
-                width: 90%;
-            } 
-            .rt{
+
+            .form-control {
                 width: 90%;
             }
-            .sub{
-            color: white;
-            background: green;
-            border: none;
-            border-radius: 5px;
-            width: 90%;
-            text-align: center;
-            height: 40px;
-            margin-top: 30px;
-            margin-left: 20px;
-            padding-top: 10px;
-        }
-        }
-        @media screen and(min-width: 768px) {
-          .hy{
-            display: block;
-          }
-          .rate{
-            display: none;
-          }
-          .nin{
-            margin-left: -400px;
-          }
 
-          .soso{
-            display: none;
-          }
+            .rt {
+                width: 100%;
+                margin-right: 210px;
+            }
+
+            .sub {
+                color: white;
+                background: green;
+                border: none;
+                border-radius: 5px;
+                width: 90%;
+                text-align: center;
+                height: 40px;
+                margin-top: 30px;
+                margin-left: 20px;
+                padding-top: 10px;
+            }
+        }
+
+        @media screen and(min-width: 768px) {
+            .hy {
+                display: block;
+            }
+
+            .rate {
+                display: none;
+            }
+
+            .nin {
+                margin-left: -400px;
+            }
+
+            .soso {
+                display: none;
+            }
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg lof fixed top up">
-       <div class="container"> 
-        <div class="soso">
-            <a   class="navbar-toggler fr" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="fa fa-bars pur"></span>
-            </a>
-        </div>
-        <div>
-            <a href="#"><img src="cac.png" height="50px"></a>
-        </div>
-        <div style="margin-left: 400px;">
-        </div>
-        <div class="offcanvas offcanvas-start  text-white bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header we">
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div class="container">
+            <div class="soso">
+                <a class="navbar-toggler fr" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars pur"></span>
+                </a>
             </div>
-            <div class="offcanvas-body body">
-                <ul class=" navbar-nav justify-content-start  flex-grow-1 pe-3 hy">
-                    <div class="vr" style="color: grey; width: 1px; height: 50px;"></div>
-                    <li class="nav-item">
-                        <a class="nav-link ht" href="swift.html" >Swift</a>
-                    </li> <hr> 
-                    <li class="nav-item">
-                    <a class="nav-link active ht " href="cac.html" style="background: green; color: white; width: 50px; height: 50px; text-align: center;">CAC</a> 
-                    </li> <hr>
-                    <li class="nav-item">
-                    <a class="nav-link ht " href="simplified.html">Simplified</a>
-                    </li> <hr>
-                    <div class="vr" style="color: grey; width: 1px; height: 50px;"></div>
-                    <li class="nav-item">
-                    <a class="nav-link ht" href="whatsapp.html" >Whatsapp</a>
-                    </li><hr>
-                    <div class="vr" style="color: grey; width: 1px; height: 50px;"></div>
-                    <li class="nav-item">
-                    <a class="nav-link ht " href="explore.html">Explore</a>
-                    </li><hr>
-                    <div class="vr" style="color: grey; width: 1px; height: 50px;"></div>
-                    <li class="nav-item">
-                    <a class="nav-link ht " href="download.html" >Download</a>
-                    </li><hr>
-                    <div class="vr" style="color: grey; width: 1px;height: 50px; "></div>
-                    <li class="nav-item"> 
-                    <a class="nav-link ht" href="whogohost.html" >Whogohost</a>
-                    </li><hr>
-                    <div class="vr" style="color: grey; height: 50px;"></div>
-                    <li class="nav-item">
-                    <a class="nav-link ht" href="valuemax.html">Valuemax</a>
-                    </li><hr>
-                </ul>
-                <div class="rate">
-                    <p class="nav-item">
-                      <a class="nav-link " href="#">Register</a>
-                    </p><hr>
-                    </li>
-                    <p class="nav-item">
-                      <a class="nav-link" href="#" ><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
-                    </p>
-                </div>    
+            <div>
+                <a href="#"><img src="cac.png" height="50px"></a>
+            </div>
+            <div style="margin-left: 400px;">
+            </div>
+            <div class="offcanvas offcanvas-start  text-white bg-dark" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header we">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body body">
+                    <ul class=" navbar-nav justify-content-start  flex-grow-1 pe-3 hy">
+                        <div class="vr" style="color: grey; width: 1px; height: 50px;"></div>
+                        <li class="nav-item">
+                            <a class="nav-link ht" href="swift.html">Swift</a>
+                        </li>
+                        <hr>
+                        <li class="nav-item">
+                            <a class="nav-link active ht " href="cac.html"
+                                style="background: green; color: white; width: 50px; height: 50px; text-align: center;">CAC</a>
+                        </li>
+                        <hr>
+                        <li class="nav-item">
+                            <a class="nav-link ht " href="simplified.html">Simplified</a>
+                        </li>
+                        <hr>
+                        <div class="vr" style="color: grey; width: 1px; height: 50px;"></div>
+                        <li class="nav-item">
+                            <a class="nav-link ht" href="whatsapp.html">Whatsapp</a>
+                        </li>
+                        <hr>
+                        <div class="vr" style="color: grey; width: 1px; height: 50px;"></div>
+                        <li class="nav-item">
+                            <a class="nav-link ht " href="explore.html">Explore</a>
+                        </li>
+                        <hr>
+                        <div class="vr" style="color: grey; width: 1px; height: 50px;"></div>
+                        <li class="nav-item">
+                            <a class="nav-link ht " href="download.html">Download</a>
+                        </li>
+                        <hr>
+                        <div class="vr" style="color: grey; width: 1px;height: 50px; "></div>
+                        <li class="nav-item">
+                            <a class="nav-link ht" href="whogohost.html">Whogohost</a>
+                        </li>
+                        <hr>
+                        <div class="vr" style="color: grey; height: 50px;"></div>
+                        <li class="nav-item">
+                            <a class="nav-link ht" href="valuemax.html">Valuemax</a>
+                        </li>
+                        <hr>
+                    </ul>
+                    <div class="rate">
+                        <p class="nav-item">
+                            <a class="nav-link " href="#">Register</a>
+                        </p>
+                        <hr>
+                        </li>
+                        <p class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-       </div>
     </nav>
     <div class="day">
-        <ul class="nav justify-content-end" style="padding-right: 50px; color: white; background: rgba(0, 128, 0, 0.703);">
-        </li><hr>
-        <div class="vr" style="color: grey; width: 1px;"></div>
+        <ul class="nav justify-content-end"
+            style="padding-right: 50px; color: white; background: rgba(0, 128, 0, 0.703);">
+            </li>
+            <hr>
+            <div class="vr" style="color: grey; width: 1px;"></div>
             <li class="nav-item">
-              <a class="nav-link " ahref="#" style="color: white;">Register</a>
-            </li><hr>
+                <a class="nav-link " ahref="#" style="color: white;">Register</a>
+            </li>
+            <hr>
             <div class="vr" style="color: grey; width: 1px;"></div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color: white;"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a>
+                <a class="nav-link" href="#" style="color: white;"><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    Login</a>
             </li>
         </ul>
     </div>
-     <h4 class="log">Login into your account</h4>
-     <div class="ope">
+    <h4 class="log">Login into your account</h4>
+    <div class="ope">
         <p class="nin"><i>NOTICE OF NIN</i></p>
         <div class="alert" role="alert">
-            NIN validation has been eased due to ongoing NIMC system maintenance. After the maintenance, the service would resume fully.
+            NIN validation has been eased due to ongoing NIMC system maintenance. After the maintenance, the service
+            would resume fully.
         </div>
         <ul class="nav nav-tabs kl" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active few" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Username</button>
+                <button class="nav-link active few" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Username</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link few" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Email</button>
+                <button class="nav-link few" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Email</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link few" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Phone Number</button>
+                <button class="nav-link few" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Phone
+                    Number</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link few" id="note-tab" data-bs-toggle="tab" data-bs-target="#note-tab-pane" type="button" role="tab" aria-controls="note-tab-pane" aria-selected="false">Accredition Number</button>
+                <button class="nav-link few" id="note-tab" data-bs-toggle="tab" data-bs-target="#note-tab-pane"
+                    type="button" role="tab" aria-controls="note-tab-pane" aria-selected="false">Accredition
+                    Number</button>
             </li>
-           
-          </ul>
-          <div class="rt">
-            <div class="tab-content fr" id="myTabContent">
-                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"    tabindex="0">
-                    <div class="mb-3">
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Username">
+
+        </ul>
+        <form  name="myform" onSubmit="return(validate())">
+            <div class="rt">
+                <div class="tab-content fr" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                        tabindex="0">
+                        <div class="mb-3">
+                            <input name="fst" class="form-control" id="exampleFormControlInput1"
+                                placeholder=" Enter Username"> <span class="user"
+                                style="font-size: 15px; color: red;"></span>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"><input
+                            name="snd" type="txt" class="form-control" id="exampleFormControlInput1"
+                            placeholder=" Enter Email"> <span class="use"
+                            style="font-size: 15px; color: red;"></span>
+                    </div>
+                    <div class="tab-pane " id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"><input
+                        name="tid" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Phone Number"
+                            > <span class="us"
+                            style="font-size: 15px; color: red;"></span></div>
+                    <div class="tab-pane " id="note-tab-pane" role="tabpanel" aria-labelledby="note-tab"><input
+                             name="fut" type="text" class="form-control" name="fut" id="exampleFormControlInput1"
+                            placeholder=" Enter Accredition Number"><span class="u"
+                            style="font-size: 15px; color: red;"></span>
+                    </div>
+                    <button onclick="validate()" class="sub">
+                        <h6>Submit</h6>
+                    </button>
                 </div>
-                </div>
-                <div class="tab-pane" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" ><input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Email"></div>
-                <div class="tab-pane " id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" ><input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Phone Number"></div>
-                <div class="tab-pane " id="note-tab-pane" role="tabpanel" aria-labelledby="note-tab" ><input type="email" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Accredition Number"></div>
-                <button class="sub"><h6>Submit</h6></button>
             </div>
-         </div>
-         <button class="lat">New to us? <span style="color: blue;">Sign Up</span> </button>
-         <p class="dax">Click the button below to resend account verification email</p>
-         <button class="hu"><h6>Resend Email</h6></button>
-     </div>
-    
-    <div style="text-align: center; background-color: rgb(117, 117, 117); color: white; padding: 27px; padding-top: 20px; font-size: 15px; margin-top: 300px;">
-         <img src="coat.png" height="20px"> © 2023 Corporate Affairs Commission (CAC), Nigeria <br>
-        Privacy Policy<span style="color: rgb(6, 210, 6);">|</span> <a href="#"  class="do"> Refunds, Cancellation and Return Policy </a><span style="color:rgb(6, 209, 6)">|</span> <a href="#" class="do"> Terms of Use</a> <span style="color: rgb(4, 211, 4);">|</span><a href="#"  class="do"> Contact Us</a>
+        </form>    
+        <button class="lat">New to us? <span style="color: blue;">Sign Up</span> </button>
+        <p class="dax">Click the button below to resend account verification email</p>
+        <button class="hu">
+            <h6>Resend Email</h6>
+        </button>
+    </div>
+
+    <div
+        style="text-align: center; background-color: rgb(117, 117, 117); color: white; padding: 27px; padding-top: 20px; font-size: 15px; margin-top: 300px;">
+        <img src="coat.png" height="20px"> © 2023 Corporate Affairs Commission (CAC), Nigeria <br>
+        Privacy Policy<span style="color: rgb(6, 210, 6);">|</span> <a href="#" class="do"> Refunds, Cancellation and
+            Return Policy </a><span style="color:rgb(6, 209, 6)">|</span> <a href="#" class="do"> Terms of Use</a> <span
+            style="color: rgb(4, 211, 4);">|</span><a href="#" class="do"> Contact Us</a>
     </div>
     <div>
-        <p style="color: red; text-align: center;">CAVEAT: THIS IS STUDENT PROJECT SOLELY FOR LEARNING AND PRACTICE PURPOSE, AND NOT AN ATTEMPT TO CLONE THE EXISTING PAGE</p>
+        <p style="color: red; text-align: center;">CAVEAT: THIS IS STUDENT PROJECT SOLELY FOR LEARNING AND PRACTICE
+            PURPOSE, AND NOT AN ATTEMPT TO CLONE THE EXISTING PAGE</p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
+    <script>
+        function validate() {
+            let names = /^[a-zA-Z]+$/;
+            let em = /^\w+@[a-z]+\.[a-z]{2,3}$/;
+            let nums = /^[0-9]+$/;
+            let phoneNumber = / ((^090)([23589])) | ((^070)([1 - 9])) | ((^080)([2 - 9])) | ((^081)([0 - 9]))(\d{ 7})/;
+            let Accredition = /^[0-9]{3}-[0-9]{2}-[0-9]{4}$/;
+            if (!document.myform.fst.value.match(names)) {
+                document.querySelector(`.user`).innerHTML=`invalid UserName`
+                return false;
+            }
+            if (!document.myform.snd.value.match(names)) {
+                document.querySelector(`.use`).innerHTML=`invalid Email`
+                return false;
+            }
+            if (!document.myform.tid.value.match(names)) {
+                document.querySelector(`.us`).innerHTML=`invalid Phone Number`
+                return false;
+            }
+            if (!document.myform.fut.value.match(names)) {
+                document.querySelector(`.u`).innerHTML=`invalid Accredition Number`
+                return false;
+            }
+            else {
+                return true;
+            }
+
+
+
+        }    
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
