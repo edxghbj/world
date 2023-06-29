@@ -147,13 +147,15 @@
             margin-left: 20px;
             margin-top: 20px;
         }
-        @media screen and (max-width: 1000px){
-           .rt{ 
-            margin-right: 250px;
-           }
-           .day{
-            display: none;
-           }
+
+        @media screen and (max-width: 1000px) {
+            .rt {
+                margin-right: 250px;
+            }
+
+            .day {
+                display: none;
+            }
         }
 
         @media screen and (max-width: 768px) {
@@ -393,37 +395,33 @@
             </li>
 
         </ul>
-        <form  name="myform" onSubmit="return(validate())">
+        <form name="myform" onSubmit="return(validate())">
             <div class="rt">
                 <div class="tab-content fr" id="myTabContent">
                     <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
                         tabindex="0">
                         <div class="mb-3">
                             <input name="fst" class="form-control" id="exampleFormControlInput1"
-                                placeholder=" Enter Username"> <span class="user"
-                                style="font-size: 15px; color: red;"></span>
+                                placeholder=" Enter Username" required>
                         </div>
                     </div>
                     <div class="tab-pane" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"><input
-                            name="snd" type="txt" class="form-control" id="exampleFormControlInput1"
-                            placeholder=" Enter Email"> <span class="use"
-                            style="font-size: 15px; color: red;"></span>
+                            name="snd" type="email" class="form-control" id="exampleFormControlInput2"
+                            placeholder=" Enter Email" required>
                     </div>
                     <div class="tab-pane " id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"><input
-                        name="tid" class="form-control" id="exampleFormControlInput1" placeholder=" Enter Phone Number"
-                            > <span class="us"
-                            style="font-size: 15px; color: red;"></span></div>
+                            name="tid" class="form-control" id="exampleFormControlInput3"
+                            placeholder=" Enter Phone Number" required></div>
                     <div class="tab-pane " id="note-tab-pane" role="tabpanel" aria-labelledby="note-tab"><input
-                             name="fut" type="text" class="form-control" name="fut" id="exampleFormControlInput1"
-                            placeholder=" Enter Accredition Number"><span class="u"
-                            style="font-size: 15px; color: red;"></span>
+                            name="fut" type="number" class="form-control" name="fut" id="exampleFormControlInput4"
+                            placeholder=" Enter Accredition Number" required>
                     </div>
-                    <button onclick="validate()" class="sub">
+                    <button onclick="validate()" class="sub" type="submit">
                         <h6>Submit</h6>
                     </button>
                 </div>
             </div>
-        </form>    
+        </form>
         <button class="lat">New to us? <span style="color: blue;">Sign Up</span> </button>
         <p class="dax">Click the button below to resend account verification email</p>
         <button class="hu">
@@ -445,32 +443,35 @@
 
     <script>
         function validate() {
-            let names = /^[a-zA-Z]+$/;
-            let em = /^\w+@[a-z]+\.[a-z]{2,3}$/;
-            let nums = /^[0-9]+$/;
-            let phoneNumber = / ((^090)([23589])) | ((^070)([1 - 9])) | ((^080)([2 - 9])) | ((^081)([0 - 9]))(\d{ 7})/;
-            let Accredition = /^[0-9]{3}-[0-9]{2}-[0-9]{4}$/;
-            if (!document.myform.fst.value.match(names)) {
-                document.querySelector(`.user`).innerHTML=`invalid UserName`
-                return false;
+            let fat = document.querySelector("#exampleFormControlInput1");
+            let at = document.querySelector("#exampleFormControlInput2");
+            let t = document.querySelector("#exampleFormControlInput3");
+            let fa = document.querySelector("#exampleFormControlInput4");
+            let go = document.querySelector(".sub");
+            if(fat==" "){
+                sub.disabled=`disabled`;
             }
-            if (!document.myform.snd.value.match(names)) {
-                document.querySelector(`.use`).innerHTML=`invalid Email`
-                return false;
+            else{
+                sub.disabled=`false`
             }
-            if (!document.myform.tid.value.match(names)) {
-                document.querySelector(`.us`).innerHTML=`invalid Phone Number`
-                return false;
+            if(at==" "){
+                sub.disabled=`disabled`;
             }
-            if (!document.myform.fut.value.match(names)) {
-                document.querySelector(`.u`).innerHTML=`invalid Accredition Number`
-                return false;
+            else{
+                sub.disabled=`false`
             }
-            else {
-                return true;
+            if(t==" "){
+                sub.disabled=`disabled`;
             }
-
-
+            else{
+                sub.disabled=`false`
+            }
+            if(fa==" "){
+                sub.disabled=`disabled`;
+            }
+            else{
+                sub.disabled=`false`
+            }
 
         }    
     </script>

@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+      body{
+        margin: 0px;
+        padding: 0px;
+      }
         .nav{
             display: flex;
             flex-direction: row;
@@ -28,12 +32,6 @@
         }
         .wait{
           font-size: 20px; margin-top: 10px; color:rgb(44, 140, 124); background: rgb(224, 224, 224); padding: 8px 10px 8px 10px; border-radius: 100%;
-        }
-        .joh{
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-
         }
         .ode{
           box-shadow: 5px 5px 10px rgb(184, 184, 184);
@@ -77,6 +75,10 @@
           color:  rgb(2, 62, 52);
           font-size: 20px;
         }
+        .second{
+          overflow-y: scroll;
+          height: 700px;
+        }
         @media screen and (max-width: 1000px) {
           .bye{
             display: none;
@@ -93,7 +95,7 @@
         }
 
         }
-        @media screen  and (min-width: 1000px){
+        @media screen  and (min-width: 900px){
         .special{
             display: none;
         }
@@ -107,6 +109,7 @@
         .second{
           overflow-y: scroll;
           height: 700px;
+          width: 60%;
         }.butt{
           display: none;
         }
@@ -187,7 +190,6 @@
         }
         .oz:hover{
           background:  rgb(24, 114, 99) ;
-          padding: 10px;
           border-radius: 10px;
         }
     </style>
@@ -235,15 +237,15 @@
     </div> 
     
     
-    <div class="joh">
-        <div class="ode">
+    <div class=" row joh">
+        <div class=" col-sm-6 ode">
             <div class="accordion accordion" id="accordionFlushExample" style="max-height: 600px; min-height: 600px;" >
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                       <div class="wait">
                       <i class=" fa-sharp fa-solid fa-flag"></i>
-                    </div> <h6 style="margin-left: 20px; margin-top: 15px;">Get Started</h6>
+                    </div> <h6 style="margin-left: 20px; margin-top: 15px;"> <a class="nav-link  vt"  href="swift.html">Swift </a></h6>
                     </button>
                   </h2>
                   <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -334,7 +336,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                       <div class="wait">
                         <i class="fa-regular fa-comments"></i>
-                  </div> <h6 style="margin-left: 20px; margin-top: 15px;">Chat</h6>
+                  </div> <h6 style="margin-left: 20px; margin-top: 15px;"><a class="nav-link vt" href="cac.html">CAC</a></h6>
                     </button>
                   </h2>
                   <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -409,7 +411,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                       <div class="wait">
                         <i class="fa-solid fa-phone"></i>
-                  </div> <h6 style="margin-left: 20px; margin-top: 15px;">Voice and Video Call</h6>
+                  </div> <h6 style="margin-left: 20px; margin-top: 15px;"><a class="nav-link vt" href="simplified.html" >Simplified</a></h6>
                     </button>
                   </h2>
                   <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -588,7 +590,7 @@
 
 
 
-  <div class="second"> 
+  <div class=" col-sm-6 second"> 
     <h4 style="margin-top: 40px; margin-left: 20px;"> <b>How can we help you?</b></h4> <br> 
 
 <input class="form-control" list="datalistOptions" style="height: 60px; background-color: rgb(237, 237, 237);" id="exampleDataList" placeholder=" Search help article...">
